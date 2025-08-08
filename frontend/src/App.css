@@ -1,6 +1,6 @@
 /* Custom animations and styles for Caesar Soft */
 
-/* Marquee Animation for Running Banner */
+/* Marquee Animation for Running Banner - Fixed */
 @keyframes marquee {
   0% {
     transform: translateX(100%);
@@ -11,7 +11,14 @@
 }
 
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 30s linear infinite;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation-duration: 20s;
+  }
 }
 
 /* Animation Delays */
