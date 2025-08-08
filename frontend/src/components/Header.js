@@ -6,19 +6,21 @@ const Header = () => {
     <header className="relative w-full bg-black/90 backdrop-blur-sm border-b border-red-900/30">
       {/* Running Banner */}
       <div className="bg-gradient-to-r from-red-900/20 to-red-600/20 py-2 overflow-hidden">
-        <div className="running-banner whitespace-nowrap text-red-400 font-bold text-sm animate-marquee">
-          <span className="inline-block px-8 animate-pulse">
-            {bannerMessages[0]}
-          </span>
-          <span className="inline-block px-8 animate-pulse animation-delay-200">
-            {bannerMessages[1]}
-          </span>
-          <span className="inline-block px-8 animate-pulse animation-delay-400">
-            {bannerMessages[2]}
-          </span>
-          <span className="inline-block px-8 animate-pulse animation-delay-600">
-            {bannerMessages[3]}
-          </span>
+        <div className="running-banner whitespace-nowrap text-red-400 font-bold text-sm">
+          <div className="animate-marquee inline-block">
+            <span className="inline-block px-8 animate-pulse">
+              {bannerMessages[0]}
+            </span>
+            <span className="inline-block px-8 animate-pulse animation-delay-200">
+              {bannerMessages[1]}
+            </span>
+            <span className="inline-block px-8 animate-pulse animation-delay-400">
+              {bannerMessages[2]}
+            </span>
+            <span className="inline-block px-8 animate-pulse animation-delay-600">
+              {bannerMessages[3]}
+            </span>
+          </div>
         </div>
       </div>
 
