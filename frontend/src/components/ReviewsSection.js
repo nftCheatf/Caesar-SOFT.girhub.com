@@ -31,21 +31,7 @@ const ReviewsSection = () => {
             Что говорят наши пользователи о CAESAR SOFT 2025
           </p>
           
-          {/* Overall Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
-            <div className="bg-black/30 rounded-xl p-6 border border-red-900/20">
-              <div className="text-3xl font-black text-red-500 mb-2">4.9/5</div>
-              <div className="text-gray-300 font-medium">Средний рейтинг</div>
-            </div>
-            <div className="bg-black/30 rounded-xl p-6 border border-red-900/20">
-              <div className="text-3xl font-black text-red-500 mb-2 animate-pulse">0</div>
-              <div className="text-gray-300 font-medium">Банов за 2025</div>
-            </div>
-            <div className="bg-black/30 rounded-xl p-6 border border-red-900/20">
-              <div className="text-3xl font-black text-red-500 mb-2">1.2K+</div>
-              <div className="text-gray-300 font-medium">Отзывов</div>
-            </div>
-          </div>
+
         </div>
 
         {/* Reviews Grid */}
