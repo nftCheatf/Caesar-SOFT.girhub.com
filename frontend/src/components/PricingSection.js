@@ -111,7 +111,7 @@ const PricingSection = () => {
                       : 'bg-red-600/80 text-white hover:bg-red-600 shadow-lg shadow-red-500/20'
                   }`}
                 >
-                  💬 КУПИТЬ В TELEGRAM
+                  КУПИТЬ
                 </button>
               </div>
             </div>
