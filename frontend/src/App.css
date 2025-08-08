@@ -1,34 +1,252 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Custom animations and styles for Caesar Soft */
+
+/* Marquee Animation for Running Banner */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.animate-marquee {
+  animation: marquee 20s linear infinite;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Animation Delays */
+.animation-delay-200 {
+  animation-delay: 200ms;
 }
 
-.App-link {
-    color: #61dafb;
+.animation-delay-400 {
+  animation-delay: 400ms;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+/* Custom Pulse with Red Glow */
+@keyframes redPulse {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+  }
+  50% {
+    opacity: 0.7;
+    text-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+  }
+}
+
+.animate-red-pulse {
+  animation: redPulse 0.8s ease-in-out infinite;
+}
+
+/* Glowing Border Animation */
+@keyframes glowBorder {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(239, 68, 68, 0.6);
+  }
+}
+
+.animate-glow-border {
+  animation: glowBorder 2s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient Text Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-text {
+  background: linear-gradient(45deg, #ef4444, #dc2626, #b91c1c, #ef4444);
+  background-size: 300% 300%;
+  animation: gradientShift 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth Transitions */
+* {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Disable transitions on transforms to prevent conflicts */
+*:not(.no-transform-transition) {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity, box-shadow, filter, backdrop-filter;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #dc2626, #b91c1c);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ef4444, #dc2626);
+}
+
+/* Selection Color */
+::selection {
+  background-color: rgba(239, 68, 68, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: rgba(239, 68, 68, 0.3);
+  color: white;
+}
+
+/* Custom Focus Ring */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #ef4444;
+  outline-offset: 2px;
+}
+
+/* Noise Texture Overlay */
+.noise-overlay {
+  position: relative;
+}
+
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23000' points='50 0 60 40 100 50 60 60 50 100 40 60 0 50 40 40'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Glass Morphism Effect */
+.glass-morphism {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Text Glow Effect */
+.text-glow {
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Red Blinking Text - 0.8s frequency as specified */
+@keyframes redBlink {
+  0%, 50% {
+    color: #ef4444;
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+  }
+  51%, 100% {
+    color: #dc2626;
+    text-shadow: 0 0 20px rgba(220, 38, 38, 0.8);
+  }
+}
+
+.red-blink {
+  animation: redBlink 0.8s linear infinite;
+}
+
+/* Semi-transparent black background with aging effect */
+.aging-bg {
+  background: rgba(0, 0, 0, 0.85);
+  position: relative;
+}
+
+.aging-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(139, 69, 19, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(101, 67, 33, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Auto-dimming on scroll effect */
+.scroll-dim {
+  transition: opacity 0.3s ease;
+}
+
+/* Hover suspend effect */
+.hover-suspend {
+  transition: all 0.3s ease;
+}
+
+.hover-suspend:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation-duration: 15s;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .glass-morphism {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #ef4444;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-red-pulse,
+  .animate-glow-border,
+  .animate-float,
+  .animate-gradient-text,
+  .red-blink {
+    animation: none;
+  }
+  
+  * {
+    transition-duration: 0ms;
+  }
 }
