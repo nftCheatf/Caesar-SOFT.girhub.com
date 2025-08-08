@@ -9,11 +9,12 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,0,0,0.05),transparent_50%)]"></div>
       
       {/* Animated Grid Background */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="grid grid-cols-12 h-full animate-pulse">
-          {Array.from({length: 144}).map((_, i) => (
-            <div key={i} className="border border-red-500/20 animate-pulse" style={{animationDelay: `${i * 0.1}s`}}></div>
-          ))}
+      <div className="absolute inset-0 opacity-5">
+        <div className="h-full w-full" 
+             style={{
+               backgroundImage: `linear-gradient(rgba(239, 68, 68, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 68, 68, 0.1) 1px, transparent 1px)`,
+               backgroundSize: '20px 20px'
+             }}>
         </div>
       </div>
 
