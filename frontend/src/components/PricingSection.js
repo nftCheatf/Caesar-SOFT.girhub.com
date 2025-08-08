@@ -161,7 +161,7 @@ const PricingSection = () => {
                       onClick={() => handlePurchase(plan)}
                       className="w-full bg-gradient-to-r from-red-600 via-red-500 to-red-600 text-white text-2xl font-black py-6 rounded-2xl hover:from-red-500 hover:to-red-500 transition-all duration-300 shadow-2xl shadow-red-500/40 hover:shadow-red-500/60 transform hover:-translate-y-2 hover:scale-105"
                     >
-                      🚀 КУПИТЬ LIFETIME
+                      КУПИТЬ LIFETIME
                     </button>
                     
                     <div className="mt-4 text-center">
