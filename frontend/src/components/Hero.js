@@ -87,7 +87,7 @@ const Hero = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center max-w-3xl mx-auto">
           <div className="bg-black/30 rounded-xl p-6 border border-red-900/20">
             <div className="text-3xl font-black text-red-500 mb-2 animate-pulse">100%</div>
             <div className="text-gray-300 font-medium">Невидимость</div>
@@ -95,10 +95,6 @@ const Hero = () => {
           <div className="bg-black/30 rounded-xl p-6 border border-red-900/20">
             <div className="text-3xl font-black text-red-500 mb-2 animate-pulse">24/7</div>
             <div className="text-gray-300 font-medium">Поддержка</div>
-          </div>
-          <div className="bg-black/30 rounded-xl p-6 border border-red-900/20">
-            <div className="text-3xl font-black text-red-500 mb-2 animate-pulse">50K+</div>
-            <div className="text-gray-300 font-medium">Пользователей</div>
           </div>
           <div className="bg-black/30 rounded-xl p-6 border border-red-900/20">
             <div className="text-3xl font-black text-red-500 mb-2 animate-pulse">2025</div>
