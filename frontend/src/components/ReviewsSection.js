@@ -99,25 +99,7 @@ const ReviewsSection = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-red-900/20 via-black/60 to-red-900/20 rounded-3xl p-12 border border-red-500/30">
-            <h3 className="text-3xl font-black text-white mb-4">
-              Присоединяйтесь к 50,000+ игрокам!
-            </h3>
-            <p className="text-xl text-gray-300 mb-8">
-              Получите преимущество уже сегодня
-            </p>
-            <a 
-              href="https://t.me/OwnerCaesar" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-red-600 to-red-700 text-white text-xl font-bold px-12 py-4 rounded-xl hover:from-red-500 hover:to-red-600 transition-all duration-300 shadow-2xl shadow-red-500/25 hover:shadow-red-500/50 transform hover:-translate-y-1 hover:scale-105"
-            >
-              🚀 НАЧАТЬ ИСПОЛЬЗОВАТЬ
-            </a>
-          </div>
-        </div>
+
       </div>
     </section>
   );
